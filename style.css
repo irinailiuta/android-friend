@@ -3,111 +3,115 @@ h1 {
 	font-family: 'Roboto', sans-serif;
 }
 
-.robots {
+.flex {
+    display: flex;
 }
 
-.head, 
-.left_arm, 
-.torso, 
-.right_arm, 
-.left_leg, 
-.right_leg {
+.robot {
+    justify-content: center;
+}
+
+.robot--android {
+    flex-direction: column;
+    align-items: center;
+}
+
+.android__head,
+.android__arm,
+.android__torso,
+.android__leg {
 	 background-color: #5f93e8;
 }
 
-.head { 
-	width: 200px; 
-	margin: 0 auto; 
-	height: 150px; 
-	border-radius: 200px 200px 0 0; 
+.android__head {
+	width: 200px;
+	height: 150px;
+	border-radius: 200px 200px 0 0;
 	margin-bottom: 10px;
-} 
-
-.eyes {
-	
 }
 
-.head:hover {
-	width: 300px;
+.android__head:hover {
+    width: 300px;
     transition: 1s ease-in-out;
 }
 
-.upper_body { 
-	width: 300px; 
+.android__eye {
+    width: 20px;
+    height: 20px;
+    border-radius: 15px;
+    background-color: white;
+    position: relative;
+    top: 100px;
+}
+
+.android__eye--left {
+    left: 40px;
+}
+
+.android__eye--right {
+    left: 120px;
+}
+
+.android__upper-body {
+	width: 300px;
 	height: 150px;
-	display: flex; 
-} 
+}
 
-.left_arm, .right_arm { 
-	width: 40px; 
+.android__arm {
+	width: 40px;
 	height: 125px;
-	border-radius: 100px; 
-} 
+	border-radius: 100px;
+}
 
-.left_arm { 
-	margin-right: 10px; 
-} 
+.android__arm--left {
+	margin-right: 10px;
+}
 
-.right_arm { 
-	margin-left: 10px; 
-} 
+.android__arm--left:hover {
+    transform: rotate(30deg);
+}
 
-.torso { 
-	width: 200px; 
+.android__arm--right {
+	margin-left: 10px;
+}
+
+.android__arm--right:hover {
+    transform: rotate(-30deg);
+}
+
+.android__torso {
+	width: 200px;
 	height: 200px;
-	border-radius: 0 0 50px 50px; 
-} 
+	border-radius: 0 0 50px 50px;
+}
 
-.lower_body { 
-	width: 200px; 
+.android__lower-body {
+	width: 200px;
 	height: 200px;
-	/* This is another useful property. Hmm what do you think it does?*/
-	margin: 0 auto;
+}
 
-} 
-
-.left_leg, .right_leg { 
-	width: 40px; 
+.android__leg {
+	width: 40px;
 	height: 120px;
-	border-radius: 0 0 100px 100px; 
-} 
+	border-radius: 0 0 100px 100px;
+}
 
-.left_leg { 
-	margin-left: 45px; 
-} 
+.android__leg--left {
+	margin-left: 45px;
+}
 
-.left_leg:hover {
-	-webkit-transform: rotate(20deg);
-    -moz-transform: rotate(20deg);
-    -o-transform: rotate(20deg);
-    -ms-transform: rotate(20deg);
+.android__leg--left:hover {
     transform: rotate(20deg);
 }
 
-.right_leg { 
-	margin-left: 30px; 
+.android__leg--right {
+	margin-left: 30px;
 }
 
-.left_eye, .right_eye { 
-	width: 20px; 
-	height: 20px; 
-	border-radius: 15px; 
-	background-color: white;  
-} 
-
-.left_eye { 
-	/* These properties are new and you haven't encountered
-	in this course. Check out CSS Tricks to see what it does! */
-	position: relative; 
-	top: 100px; 
-	left: 40px; 
-} 
-
-.right_eye { 
-	position: relative; 
-	top: 100px; 
-	left: 120px; 
+.android__leg--right:hover {
+    transform: rotate(-20deg);
 }
+
 
 
 
